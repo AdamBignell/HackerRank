@@ -30,18 +30,20 @@ int main() {
     int qType;
     int x;
     int y;
+
+    vector< vector<int> > seqList(n);
     
     while(line < numQ){
         cin >> qType;
         cin >> x;
         cin >> y;
-        vector< vector<int> > seqList;
         if (qType == 1){
             queryOne(seqList, x, y, lastAns, n);
         }
         if (qType == 2){
             queryTwo(seqList, x, y, lastAns, n);
         }
+        line++;
     }
     
     return 0;
